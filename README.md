@@ -16,5 +16,10 @@ django-admin --version
 ## Run server. 
 ```
 cd my_biography
+python manage.py migrate  
 python manage.py runserver
+```
+## Request
+```
+127.0.0.1:8000/main/
 ```
