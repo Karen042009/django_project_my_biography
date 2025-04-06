@@ -80,23 +80,33 @@
     <section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center">Կապ</h2>
-            <form>
+            <form onsubmit="handleSubmit(event)">
                 <div class="mb-3">
                     <label class="form-label">Անուն</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="name">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Էլ․ փոստ</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" id="email">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Հաղորդագրություն</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                    <textarea class="form-control" rows="4" id="message"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Ուղարկել</button>
             </form>
         </div>
     </section>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Արգելում ենք էջի թարմացումը
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert("Հաղորդագրությունը ընդունվեց, շնորհակալություն!");
+        }
+    </script>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Կարեն Պողոսյան | <a href="#" class="text-white">LinkedIn</a></p>
     </footer>
